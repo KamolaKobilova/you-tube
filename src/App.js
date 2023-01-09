@@ -1,9 +1,13 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import {Box} from '@mui/material'
+import {Box} from '@mui/material';
+
+import {Navbar, Feed, VideoDetail, SearchFeed, ChannelDetail} from './components';
+
 
 function App() {
+  return (
   <BrowserRouter>
-     <Box sx={{backgroundColor: '#000'}}> 
+     <Box sx={{backgroundColor: 'black'}}> 
         <Navbar/>  
         <Routes>
           <Route path='/' exact element={<Feed />} />
@@ -13,6 +17,7 @@ function App() {
         </Routes>
      </Box>
   </BrowserRouter>
+  )
 }
 
 export default App;
